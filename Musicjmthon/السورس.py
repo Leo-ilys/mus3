@@ -92,19 +92,3 @@ async def help(client, m: Message):
     await m.reply(HEPZ)
 
 
-@Client.on_message(filters.command(["السورس"], prefixes=f"{HNDLR}"))
-async def repo(client, m: Message):
-    await m.delete()
-    REPZ = f"""
-<b>- مرحبا {m.from_user.mention}!
-
-🎶 هذا هو سورس جمثون ميوزك
-
-🤖  اختصاص هذا البوت لتشغيل مقاطع صوتية او مقاطع الفيديو في المكالمات الصوتية
-
-⚒️ لعرض اوامر السورس ارسل  {HNDLR}الاوامر
-
-📚 • قناة جمثون  : @jmthon
-• قناة جمثون ميوزك @jjmto</b>
-"""
-    await m.reply(REPZ, disable_web_page_preview=True)

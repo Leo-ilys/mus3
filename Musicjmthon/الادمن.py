@@ -8,7 +8,6 @@ from Musicjmthon.helpers.queues import QUEUE, clear_queue
 
 
 @Client.on_message(filters.command(["تخطي"], prefixes=f"{HNDLR}"))
-@authorized_users_only
 async def skip(client, m: Message):
     await m.delete()
     chat_id = m.chat.id
